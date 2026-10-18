@@ -1,0 +1,62 @@
+{
+  "pflege": {
+    "innen-standard": 79,
+    "aussen-standard": 59,
+    "komfort-paket": 89,
+    "innenraum-intensiv": 129,
+    "komfort-paket-mit-innenraum-deluxe": 259
+  },
+  "zusatz": {
+    "zusatzleistungen-felgenversiegelung": 59,
+    "zusatzleistungen-lederreinigung-und-pflege": 79,
+    "zusatzleistungen-tierhaarentfernung": 59,
+    "zusatzleistungen-motorwaesche": 49,
+    "zusatzleistungen-ozonbehandlung": 69,
+    "zusatzleistungen-klimadesinfektion": 49,
+    "zusatzleistungen-scheinwerfer-aufbereitung-paar": 79,
+    "zusatzleistungen-cabrioverdeck-reinigen-und-impraegnieren": 89
+  },
+  "politur": {
+    "hochglanzpolitur": 249,
+    "lackkorrektur": 449,
+    "wachs-und-lackversiegelung": 89
+  },
+  "keramik": {
+    "keramik-standard-kleinwagen": 599,
+    "keramik-standard-kombi": 699,
+    "keramik-standard-suv": 799,
+    "keramik-standard-van-transporter": 899,
+    "keramik-deluxe-kleinwagen": 799,
+    "keramik-deluxe-kombi": 899,
+    "keramik-deluxe-suv": 999,
+    "keramik-deluxe-van-transporter": 1099
+  },
+  "folie": {
+    "lackschutzfolie-frontpaket": 1599,
+    "lackschutzfolie-komplett": 4599,
+    "scheibentoenung-3-tuerer": 109,
+    "scheibentoenung-5-tuerer": 119
+  },
+  "reifen": {
+    "reifen-und-raeder-raederwechsel-4-raeder": 35,
+    "reifen-und-raeder-reifenmontage-inkl-wuchten-4-reifen": 79,
+    "reifen-und-raeder-raeder-einlagerung-pro-saison": 55,
+    "reifen-und-raeder-achsvermessung": 99
+  },
+  "wartung": {
+    "wartung-oelwechsel-inkl-oel-und-filter": 89,
+    "wartung-inspektion-nach-herstellervorgabe": 199,
+    "wartung-klimaservice-r134a": 99,
+    "wartung-klimaservice-r1234yf": 159,
+    "wartung-bremsfluessigkeit-wechseln": 79,
+    "wartung-batterie-einbauen-und-anlernen": 79
+  },
+  "reparatur": {
+    "reparatur-und-pruefung-bremsbelaege-vorne-inkl-teile": 199,
+    "reparatur-und-pruefung-bremsscheiben-und-belaege-vorne": 429,
+    "reparatur-und-pruefung-zahnriemen-inkl-wasserpumpe": 599,
+    "reparatur-und-pruefung-fehlerspeicher-auslesen": 29,
+    "reparatur-und-pruefung-hu-au-inkl-pruefgebuehr": 165,
+    "reparatur-und-pruefung-arbeitsstunde": 89
+  }
+}

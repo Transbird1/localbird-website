@@ -1,0 +1,109 @@
+# Einstellungen für das Büro (Sveltia CMS)
+backend:
+  name: github
+  repo: Transbird1/localbird-website
+  branch: main
+  commit_messages:
+    update: "Preise geändert"
+
+site_url: https://www.local-bird.de
+display_url: https://www.local-bird.de
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: preise
+    label: Preise
+    description: Hier änderst du die Preise der Website. Nach dem Speichern ist die Website nach etwa einer Minute aktuell.
+    editor:
+      preview: false
+    files:
+      - name: preise
+        label: Alle Preise
+        file: preise.json
+        format: json
+        fields:
+          - label: "Pflege-Pakete"
+            name: pflege
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Innen Standard (ab) in €", name: "innen-standard", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Außen Standard (ab) in €", name: "aussen-standard", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Komfort Paket (ab) in €", name: "komfort-paket", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Innenraum Intensiv (ab) in €", name: "innenraum-intensiv", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Komfort Paket mit Innenraum Deluxe (ab) in €", name: "komfort-paket-mit-innenraum-deluxe", widget: number, value_type: int, min: 0, required: true }
+          - label: "Zusatzleistungen"
+            name: zusatz
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Felgenversiegelung (ab) in €", name: "zusatzleistungen-felgenversiegelung", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Lederreinigung und -pflege (ab) in €", name: "zusatzleistungen-lederreinigung-und-pflege", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Tierhaarentfernung (ab) in €", name: "zusatzleistungen-tierhaarentfernung", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Motorwäsche (ab) in €", name: "zusatzleistungen-motorwaesche", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Ozonbehandlung (ab) in €", name: "zusatzleistungen-ozonbehandlung", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Klimadesinfektion (ab) in €", name: "zusatzleistungen-klimadesinfektion", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Scheinwerfer-Aufbereitung (Paar) (ab) in €", name: "zusatzleistungen-scheinwerfer-aufbereitung-paar", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Cabrioverdeck reinigen und imprägnieren (ab) in €", name: "zusatzleistungen-cabrioverdeck-reinigen-und-impraegnieren", widget: number, value_type: int, min: 0, required: true }
+          - label: "Politur und Versiegelung"
+            name: politur
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Hochglanzpolitur (ab) in €", name: "hochglanzpolitur", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Lackkorrektur (ab) in €", name: "lackkorrektur", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Wachs- und Lackversiegelung (ab) in €", name: "wachs-und-lackversiegelung", widget: number, value_type: int, min: 0, required: true }
+          - label: "Keramikversiegelung"
+            name: keramik
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Keramik Standard: Kleinwagen in €", name: "keramik-standard-kleinwagen", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Keramik Standard: Kombi in €", name: "keramik-standard-kombi", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Keramik Standard: SUV in €", name: "keramik-standard-suv", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Keramik Standard: Van/Transporter in €", name: "keramik-standard-van-transporter", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Keramik Deluxe: Kleinwagen in €", name: "keramik-deluxe-kleinwagen", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Keramik Deluxe: Kombi in €", name: "keramik-deluxe-kombi", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Keramik Deluxe: SUV in €", name: "keramik-deluxe-suv", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Keramik Deluxe: Van/Transporter in €", name: "keramik-deluxe-van-transporter", widget: number, value_type: int, min: 0, required: true }
+          - label: "Folie und Tönung"
+            name: folie
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Lackschutzfolie Frontpaket (ab) in €", name: "lackschutzfolie-frontpaket", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Lackschutzfolie komplett (ab) in €", name: "lackschutzfolie-komplett", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Scheibentönung: 3-Türer (ab) in €", name: "scheibentoenung-3-tuerer", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Scheibentönung: 5-Türer (ab) in €", name: "scheibentoenung-5-tuerer", widget: number, value_type: int, min: 0, required: true }
+          - label: "Werkstatt: Reifen und Räder"
+            name: reifen
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Räderwechsel (4 Räder) in €", name: "reifen-und-raeder-raederwechsel-4-raeder", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Reifenmontage inkl. Wuchten (4 Reifen) in €", name: "reifen-und-raeder-reifenmontage-inkl-wuchten-4-reifen", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Räder-Einlagerung pro Saison in €", name: "reifen-und-raeder-raeder-einlagerung-pro-saison", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Achsvermessung in €", name: "reifen-und-raeder-achsvermessung", widget: number, value_type: int, min: 0, required: true }
+          - label: "Werkstatt: Wartung"
+            name: wartung
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Ölwechsel inkl. Öl und Filter (ab) in €", name: "wartung-oelwechsel-inkl-oel-und-filter", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Inspektion nach Herstellervorgabe (ab) in €", name: "wartung-inspektion-nach-herstellervorgabe", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Klimaservice R134a in €", name: "wartung-klimaservice-r134a", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Klimaservice R1234yf in €", name: "wartung-klimaservice-r1234yf", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Bremsflüssigkeit wechseln in €", name: "wartung-bremsfluessigkeit-wechseln", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Batterie einbauen und anlernen in €", name: "wartung-batterie-einbauen-und-anlernen", widget: number, value_type: int, min: 0, required: true }
+          - label: "Werkstatt: Reparatur und Prüfung"
+            name: reparatur
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Bremsbeläge vorne inkl. Teile (ab) in €", name: "reparatur-und-pruefung-bremsbelaege-vorne-inkl-teile", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Bremsscheiben und Beläge vorne (ab) in €", name: "reparatur-und-pruefung-bremsscheiben-und-belaege-vorne", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Zahnriemen inkl. Wasserpumpe (ab) in €", name: "reparatur-und-pruefung-zahnriemen-inkl-wasserpumpe", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Fehlerspeicher auslesen in €", name: "reparatur-und-pruefung-fehlerspeicher-auslesen", widget: number, value_type: int, min: 0, required: true }
+              - { label: "HU/AU inkl. Prüfgebühr in €", name: "reparatur-und-pruefung-hu-au-inkl-pruefgebuehr", widget: number, value_type: int, min: 0, required: true }
+              - { label: "Arbeitsstunde in €", name: "reparatur-und-pruefung-arbeitsstunde", widget: number, value_type: int, min: 0, required: true }

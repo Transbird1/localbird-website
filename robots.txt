@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /buero/
+Sitemap: https://www.local-bird.de/sitemap.xml
