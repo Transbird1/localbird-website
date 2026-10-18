@@ -1,0 +1,37 @@
+{
+  "mo": {
+    "offen": true,
+    "von": "08:00",
+    "bis": "18:00"
+  },
+  "di": {
+    "offen": true,
+    "von": "08:00",
+    "bis": "18:00"
+  },
+  "mi": {
+    "offen": true,
+    "von": "08:00",
+    "bis": "18:00"
+  },
+  "do": {
+    "offen": true,
+    "von": "08:00",
+    "bis": "18:00"
+  },
+  "fr": {
+    "offen": true,
+    "von": "08:00",
+    "bis": "18:00"
+  },
+  "sa": {
+    "offen": true,
+    "von": "08:00",
+    "bis": "13:00"
+  },
+  "so": {
+    "offen": false,
+    "von": "",
+    "bis": ""
+  }
+}

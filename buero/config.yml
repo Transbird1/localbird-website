@@ -10,6 +10,17 @@ site_url: https://www.local-bird.de
 display_url: https://www.local-bird.de
 media_folder: assets/uploads
 public_folder: /assets/uploads
+media_libraries:
+  default:
+    config:
+      max_file_size: 15000000
+      slugify_filename: true
+      transformations:
+        raster_image:
+          format: webp
+          quality: 82
+          width: 1600
+          height: 2000
 
 collections:
   - name: preise
@@ -107,3 +118,106 @@ collections:
               - { label: "Fehlerspeicher auslesen in €", name: "reparatur-und-pruefung-fehlerspeicher-auslesen", widget: number, value_type: int, min: 0, required: true }
               - { label: "HU/AU inkl. Prüfgebühr in €", name: "reparatur-und-pruefung-hu-au-inkl-pruefgebuehr", widget: number, value_type: int, min: 0, required: true }
               - { label: "Arbeitsstunde in €", name: "reparatur-und-pruefung-arbeitsstunde", widget: number, value_type: int, min: 0, required: true }
+  - name: oeffnungszeiten
+    label: Öffnungszeiten
+    description: Erscheinen oben auf der Startseite (mit „Jetzt geöffnet“), bei Kontakt und unten auf jeder Seite.
+    editor:
+      preview: false
+    files:
+      - name: oeffnungszeiten
+        label: Öffnungszeiten
+        file: oeffnungszeiten.json
+        format: json
+        fields:
+          - label: "Montag"
+            name: mo
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Geöffnet", name: offen, widget: boolean, default: true }
+              - { label: "Von (z. B. 08:00)", name: von, widget: string, required: false, pattern: ["^([01][0-9]|2[0-3]):[0-5][0-9]$", "Bitte so schreiben: 08:00"] }
+              - { label: "Bis (z. B. 18:00)", name: bis, widget: string, required: false, pattern: ["^([01][0-9]|2[0-3]):[0-5][0-9]$", "Bitte so schreiben: 18:00"] }
+          - label: "Dienstag"
+            name: di
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Geöffnet", name: offen, widget: boolean, default: true }
+              - { label: "Von (z. B. 08:00)", name: von, widget: string, required: false, pattern: ["^([01][0-9]|2[0-3]):[0-5][0-9]$", "Bitte so schreiben: 08:00"] }
+              - { label: "Bis (z. B. 18:00)", name: bis, widget: string, required: false, pattern: ["^([01][0-9]|2[0-3]):[0-5][0-9]$", "Bitte so schreiben: 18:00"] }
+          - label: "Mittwoch"
+            name: mi
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Geöffnet", name: offen, widget: boolean, default: true }
+              - { label: "Von (z. B. 08:00)", name: von, widget: string, required: false, pattern: ["^([01][0-9]|2[0-3]):[0-5][0-9]$", "Bitte so schreiben: 08:00"] }
+              - { label: "Bis (z. B. 18:00)", name: bis, widget: string, required: false, pattern: ["^([01][0-9]|2[0-3]):[0-5][0-9]$", "Bitte so schreiben: 18:00"] }
+          - label: "Donnerstag"
+            name: do
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Geöffnet", name: offen, widget: boolean, default: true }
+              - { label: "Von (z. B. 08:00)", name: von, widget: string, required: false, pattern: ["^([01][0-9]|2[0-3]):[0-5][0-9]$", "Bitte so schreiben: 08:00"] }
+              - { label: "Bis (z. B. 18:00)", name: bis, widget: string, required: false, pattern: ["^([01][0-9]|2[0-3]):[0-5][0-9]$", "Bitte so schreiben: 18:00"] }
+          - label: "Freitag"
+            name: fr
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Geöffnet", name: offen, widget: boolean, default: true }
+              - { label: "Von (z. B. 08:00)", name: von, widget: string, required: false, pattern: ["^([01][0-9]|2[0-3]):[0-5][0-9]$", "Bitte so schreiben: 08:00"] }
+              - { label: "Bis (z. B. 18:00)", name: bis, widget: string, required: false, pattern: ["^([01][0-9]|2[0-3]):[0-5][0-9]$", "Bitte so schreiben: 18:00"] }
+          - label: "Samstag"
+            name: sa
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Geöffnet", name: offen, widget: boolean, default: true }
+              - { label: "Von (z. B. 08:00)", name: von, widget: string, required: false, pattern: ["^([01][0-9]|2[0-3]):[0-5][0-9]$", "Bitte so schreiben: 08:00"] }
+              - { label: "Bis (z. B. 18:00)", name: bis, widget: string, required: false, pattern: ["^([01][0-9]|2[0-3]):[0-5][0-9]$", "Bitte so schreiben: 18:00"] }
+          - label: "Sonntag"
+            name: so
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Geöffnet", name: offen, widget: boolean, default: true }
+              - { label: "Von (z. B. 08:00)", name: von, widget: string, required: false, pattern: ["^([01][0-9]|2[0-3]):[0-5][0-9]$", "Bitte so schreiben: 08:00"] }
+              - { label: "Bis (z. B. 18:00)", name: bis, widget: string, required: false, pattern: ["^([01][0-9]|2[0-3]):[0-5][0-9]$", "Bitte so schreiben: 18:00"] }
+  - name: aktion
+    label: Aktions-Banner
+    description: Goldener Streifen ganz oben auf der Website, z. B. für die Winteraktion. Verschwindet nach dem Enddatum von selbst.
+    editor:
+      preview: false
+    files:
+      - name: aktion
+        label: Aktions-Banner
+        file: aktion.json
+        format: json
+        fields:
+          - { label: "Banner anzeigen", name: aktiv, widget: boolean, default: false }
+          - { label: "Text", name: text, widget: string, hint: "Kurz halten, eine Zeile. Beispiel: Winteraktion bis 30.11.: Pakete ab 109 €" }
+          - { label: "Button-Text (führt zu WhatsApp, leer lassen für keinen Button)", name: button, widget: string, required: false }
+          - { label: "Anzeigen bis einschließlich", name: bis, widget: datetime, time_format: false, date_format: "DD.MM.YYYY", format: "YYYY-MM-DD", required: false }
+  - name: galerie
+    label: Galerie
+    description: Fotos auf der Seite „Galerie“. Reihenfolge per Ziehen ändern. Hochformat (4:5) sieht am besten aus. Große Handyfotos werden beim Hochladen automatisch verkleinert.
+    editor:
+      preview: false
+    files:
+      - name: galerie
+        label: Galerie-Bilder
+        file: galerie.json
+        format: json
+        fields:
+          - label: "Bilder"
+            name: bilder
+            widget: list
+            label_singular: "Bild"
+            summary: "{{fields.titel}} – {{fields.text}}"
+            fields:
+              - { label: "Foto", name: bild, widget: image }
+              - { label: "Überschrift (klein, gold)", name: titel, widget: string, hint: "z. B. Politur" }
+              - { label: "Bildunterschrift", name: text, widget: string, hint: "z. B. Vorher und nachher auf einer Haube" }
+              - { label: "Beschreibung für Blinde und Google", name: alt, widget: string, required: false, hint: "Was ist auf dem Foto zu sehen? Keine Kennzeichen von Kunden zeigen." }

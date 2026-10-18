@@ -56,6 +56,9 @@ p{margin:0}
 .todo{background:var(--todo);border-radius:3px;padding:0 4px;color:#5a4400;font-weight:600}
 
 /* Kopf */
+.aktion{background:var(--gold);color:var(--ink);font-size:15px;line-height:1.35}
+.aktion .wrap{display:flex;align-items:center;justify-content:center;gap:8px 16px;flex-wrap:wrap;padding-block:9px;text-align:center}
+.aktion a{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--white);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;gap:24px;min-height:76px}
 .brand img{height:62px;width:auto}
@@ -277,6 +280,7 @@ footer a{color:#e3e5e9}
   <symbol id="i-air" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 8h11a3 3 0 1 0-3-3M3 12h16a3 3 0 1 1-3 3M3 16h8"/></symbol>
 </svg>
 
+{{AKTION}}
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#start" aria-label="LocalBird Startseite"><img src="assets/logo.png" alt="LocalBird" width="640" height="313"></a>
@@ -305,7 +309,7 @@ footer a{color:#e3e5e9}
           <a class="btn btn-gold" href="https://wa.me/4921529809661" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Termin per WhatsApp</a>
           <a class="btn btn-ghost" href="tel:+4921529809661"><svg><use href="#i-phone"/></svg>02152 9809661</a>
         </div>
-        <p class="open" id="openState"><span class="dot"></span><span>Mo–Fr 08:00–18:00 · Sa 08:00–13:00</span></p>
+        <p class="open" id="openState"><span class="dot"></span><span>{{OEFFNUNG_KURZ}}</span></p>
       </div>
       <figure class="shot"><img src="assets/hero-studio.jpg" alt="Frisch aufbereiteter Audi A8 vor dem LocalBird-Logo in unserer Halle in Kempen" width="1080" height="1350"></figure>
     </div>
@@ -539,15 +543,7 @@ footer a{color:#e3e5e9}
         <p class="lead">Mehr Bilder und Videos zeigen wir auf Instagram: <a href="https://www.instagram.com/localbird_fahrzeugveredelung/" target="_blank" rel="noopener" style="color:var(--gold-deep);font-weight:600">@localbird_fahrzeugveredelung</a></p>
       </div>
       <div class="gallery">
-        <figure class="shot"><img src="assets/politur-5050.jpg" alt="Porsche-Motorhaube mit Abklebung, eine Hälfte poliert" loading="lazy" width="800" height="1000"><figcaption><b>Politur</b>Vorher und nachher auf einer Haube</figcaption></figure>
-        <figure class="shot"><img src="assets/folie-g-klasse.jpg" alt="Mercedes G-Klasse, Front wird mit Lackschutzfolie beklebt" loading="lazy" width="800" height="1000"><figcaption><b>Lackschutzfolie</b>Folie für die G-Klasse</figcaption></figure>
-        <figure class="shot"><img src="assets/folie-stek.jpg" alt="Audi RS in der Halle mit STEK-Folienbox" loading="lazy" width="800" height="1000"><figcaption><b>Lackschutzfolie</b>Premium-Folie von STEK</figcaption></figure>
-        <figure class="shot"><img src="assets/innen-cockpit.jpg" alt="Gereinigtes Cockpit eines Porsche 911 Turbo S" loading="lazy" width="800" height="1000"><figcaption><b>Innenraum</b>Cockpit wie neu</figcaption></figure>
-        <figure class="shot"><img src="assets/innen-fond.jpg" alt="Gepflegte Ledersitze im Fond" loading="lazy" width="800" height="1000"><figcaption><b>Innenraum</b>Leder gereinigt und gepflegt</figcaption></figure>
-        <figure class="shot"><img src="assets/glanz-911.jpg" alt="Mehrere Porsche nach der Aufbereitung in unserer Halle" loading="lazy" width="800" height="1000"><figcaption><b>Aufbereitung</b>Frisch aufbereitet, bereit zur Abholung</figcaption></figure>
-        <figure class="shot"><img src="assets/studio-g-klasse.jpg" alt="Fertig aufbereitete G-Klasse in unserer Halle" loading="lazy" width="800" height="1000"><figcaption><b>Abholbereit</b>Fertig für die Übergabe</figcaption></figure>
-        <figure class="shot"><img src="assets/felgen.jpg" alt="Silberner Porsche 911 Turbo S mit gereinigten Felgen" loading="lazy" width="800" height="1000"><figcaption><b>Felgen &amp; Lack</b>Felgen und Lack auf Hochglanz</figcaption></figure>
-        <figure class="shot"><img src="assets/halle-reihe.jpg" alt="Drei Porsche nebeneinander in der LocalBird-Halle" loading="lazy" width="800" height="1000"><figcaption><b>Unsere Halle</b>Platz für mehrere Fahrzeuge</figcaption></figure>
+        {{GALERIE}}
       </div>
       <div class="reels">
         <figure class="shot"><video src="assets/video-politur.mp4" poster="assets/video-politur.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Maschinenpolitur am Porsche"></video><figcaption><b>Politur</b>Maschinenpolitur am Porsche</figcaption></figure>
@@ -573,7 +569,7 @@ footer a{color:#e3e5e9}
             <div class="cline"><dt>Adresse</dt><dd>LocalBird GmbH<br>Hooghe Weg 31<br>47906 Kempen<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Hooghe+Weg+31+47906+Kempen" target="_blank" rel="noopener" style="font-size:16px;color:var(--gold-deep)">Route planen</a></dd></div>
             <div class="cline"><dt>Telefon &amp; WhatsApp</dt><dd><span id="tel"><a href="tel:+4921529809661">02152 9809661</a></span><button class="copy" type="button" data-copy="tel">Kopieren</button></dd></div>
             <div class="cline"><dt>E-Mail</dt><dd><span id="mail"><a href="mailto:info@local-bird.de">info@local-bird.de</a></span><button class="copy" type="button" data-copy="mail">Kopieren</button></dd></div>
-            <div class="cline"><dt>Öffnungszeiten</dt><dd><div class="hours"><span>Mo–Fr</span><span>08:00–18:00</span><span>Sa</span><span>08:00–13:00</span><span>So</span><span>geschlossen</span></div></dd></div>
+            <div class="cline"><dt>Öffnungszeiten</dt><dd><div class="hours">{{OEFFNUNG_TABELLE}}</div></dd></div>
           </dl>
           <div class="wa">
             <img src="assets/whatsapp-qr.png" alt="QR-Code für WhatsApp an LocalBird" width="118" height="118">
@@ -636,7 +632,7 @@ footer a{color:#e3e5e9}
       </div>
       <div>
         <h3>Öffnungszeiten</h3>
-        <p>Mo–Fr 08:00–18:00<br>Sa 08:00–13:00</p>
+        <p>{{OEFFNUNG_FUSS}}</p>
       </div>
     </div>
     <div class="copyright">
@@ -653,13 +649,15 @@ footer a{color:#e3e5e9}
     var parts=new Intl.DateTimeFormat('de-DE',{timeZone:'Europe/Berlin',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
     var get=function(t){var p=parts.find(function(x){return x.type===t});return p?p.value:''};
     var day=get('weekday').replace('.',''), h=parseInt(get('hour'),10), m=parseInt(get('minute'),10), now=h*60+m;
-    var close=null;
-    if(['Mo','Di','Mi','Do','Fr'].indexOf(day)>-1&&now>=480&&now<1080)close='18:00';
-    if(day==='Sa'&&now>=480&&now<780)close='13:00';
+    var Z={{OEFFNUNG_JSON}};
+    var t=Z[day], close=null;
+    if(t&&now>=t[0]&&now<t[1])close=('0'+Math.floor(t[1]/60)).slice(-2)+':'+('0'+t[1]%60).slice(-2);
     var el=document.getElementById('openState');
     if(close){el.querySelector('.dot').classList.add('on');el.lastElementChild.textContent='Jetzt geöffnet bis '+close+' Uhr';}
-    else{el.lastElementChild.textContent='Gerade geschlossen · Mo–Fr 08:00–18:00 · Sa 08:00–13:00';}
+    else{el.lastElementChild.textContent='Gerade geschlossen · {{OEFFNUNG_KURZ}}';}
   }catch(e){}
+  var ak=document.querySelector('.aktion[data-bis]');
+  if(ak&&new Date()>new Date(ak.getAttribute('data-bis')+'T23:59:59'))ak.remove();
   document.getElementById('year').textContent=new Date().getFullYear();
 
   // Seiten: Menü oben rechts schaltet zwischen Start, Pflege, Werkstatt, Firmen, Galerie, Kontakt

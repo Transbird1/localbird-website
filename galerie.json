@@ -1,0 +1,58 @@
+{
+  "bilder": [
+    {
+      "bild": "/assets/politur-5050.jpg",
+      "titel": "Politur",
+      "text": "Vorher und nachher auf einer Haube",
+      "alt": "Porsche-Motorhaube mit Abklebung, eine Hälfte poliert"
+    },
+    {
+      "bild": "/assets/folie-g-klasse.jpg",
+      "titel": "Lackschutzfolie",
+      "text": "Folie für die G-Klasse",
+      "alt": "Mercedes G-Klasse, Front wird mit Lackschutzfolie beklebt"
+    },
+    {
+      "bild": "/assets/folie-stek.jpg",
+      "titel": "Lackschutzfolie",
+      "text": "Premium-Folie von STEK",
+      "alt": "Audi RS in der Halle mit STEK-Folienbox"
+    },
+    {
+      "bild": "/assets/innen-cockpit.jpg",
+      "titel": "Innenraum",
+      "text": "Cockpit wie neu",
+      "alt": "Gereinigtes Cockpit eines Porsche 911 Turbo S"
+    },
+    {
+      "bild": "/assets/innen-fond.jpg",
+      "titel": "Innenraum",
+      "text": "Leder gereinigt und gepflegt",
+      "alt": "Gepflegte Ledersitze im Fond"
+    },
+    {
+      "bild": "/assets/glanz-911.jpg",
+      "titel": "Aufbereitung",
+      "text": "Frisch aufbereitet, bereit zur Abholung",
+      "alt": "Mehrere Porsche nach der Aufbereitung in unserer Halle"
+    },
+    {
+      "bild": "/assets/studio-g-klasse.jpg",
+      "titel": "Abholbereit",
+      "text": "Fertig für die Übergabe",
+      "alt": "Fertig aufbereitete G-Klasse in unserer Halle"
+    },
+    {
+      "bild": "/assets/felgen.jpg",
+      "titel": "Felgen & Lack",
+      "text": "Felgen und Lack auf Hochglanz",
+      "alt": "Silberner Porsche 911 Turbo S mit gereinigten Felgen"
+    },
+    {
+      "bild": "/assets/halle-reihe.jpg",
+      "titel": "Unsere Halle",
+      "text": "Platz für mehrere Fahrzeuge",
+      "alt": "Drei Porsche nebeneinander in der LocalBird-Halle"
+    }
+  ]
+}
