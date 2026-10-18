@@ -221,3 +221,24 @@ collections:
               - { label: "Überschrift (klein, gold)", name: titel, widget: string, hint: "z. B. Politur" }
               - { label: "Bildunterschrift", name: text, widget: string, hint: "z. B. Vorher und nachher auf einer Haube" }
               - { label: "Beschreibung für Blinde und Google", name: alt, widget: string, required: false, hint: "Was ist auf dem Foto zu sehen? Keine Kennzeichen von Kunden zeigen." }
+  - name: startseite
+    label: Büro-Startseite
+    description: Die Kacheln auf www.local-bird.de/buero. Reihenfolge per Ziehen ändern. Nur Links, keine Passwörter eintragen.
+    editor:
+      preview: false
+    files:
+      - name: links
+        label: Kacheln
+        file: buero/links.json
+        format: json
+        fields:
+          - label: "Kacheln"
+            name: kacheln
+            widget: list
+            label_singular: "Kachel"
+            summary: "{{fields.titel}}"
+            fields:
+              - { label: "Name", name: titel, widget: string }
+              - { label: "Kurzer Text darunter", name: text, widget: string, required: false }
+              - { label: "Adresse (Link)", name: url, widget: string, required: false, hint: "Im Browser die Adresse oben kopieren und hier einfügen, z. B. https://… Leer lassen, wenn noch unbekannt." }
+              - { label: "Kürzel im Symbol (1–2 Zeichen)", name: kuerzel, widget: string, required: false }

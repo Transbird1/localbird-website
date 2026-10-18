@@ -1,0 +1,58 @@
+{
+  "kacheln": [
+    {
+      "titel": "Website bearbeiten",
+      "text": "Preise, Öffnungszeiten, Aktion, Galerie",
+      "url": "/buero/website/",
+      "kuerzel": "W"
+    },
+    {
+      "titel": "easy Werkstatt",
+      "text": "Aufträge, Kunden, Rechnungen",
+      "url": "https://app.easywerkstatt.com/",
+      "kuerzel": "eW"
+    },
+    {
+      "titel": "Lexware Office",
+      "text": "Buchhaltung und Belege",
+      "url": "https://app.lexware.de/",
+      "kuerzel": "LO"
+    },
+    {
+      "titel": "Sparkasse",
+      "text": "Online-Banking",
+      "url": "",
+      "kuerzel": "S"
+    },
+    {
+      "titel": "Google-Profil",
+      "text": "Bewertungen, Öffnungszeiten bei Google",
+      "url": "https://business.google.com/",
+      "kuerzel": "G"
+    },
+    {
+      "titel": "Instagram",
+      "text": "@localbird_fahrzeugveredelung",
+      "url": "https://www.instagram.com/localbird_fahrzeugveredelung/",
+      "kuerzel": "IG"
+    },
+    {
+      "titel": "WhatsApp Web",
+      "text": "Kundenanfragen am Computer",
+      "url": "https://web.whatsapp.com/",
+      "kuerzel": "WA"
+    },
+    {
+      "titel": "Website ansehen",
+      "text": "www.local-bird.de",
+      "url": "https://www.local-bird.de/",
+      "kuerzel": "LB"
+    },
+    {
+      "titel": "Netlify",
+      "text": "Hosting der Website",
+      "url": "https://app.netlify.com/",
+      "kuerzel": "N"
+    }
+  ]
+}
